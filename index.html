@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekskluzywne Kompozyty i Inżynieria 3D | Studio Projektowe</title>
+    <title>LCP Solutions sp. z o.o. | Zaawansowane Kompozyty i Inżynieria CNC</title>
     <style>
         :root {
             --bg-color: #0b0b0b;
             --card-bg: #141414;
-            --accent-color: #c5a059; /* Elegancki, butikowy złoty/miedziany odcień w stylu high-end */
+            --accent-color: #c5a059; /* Elegancki, butikowy odcień high-end */
             --text-main: #ffffff;
             --text-muted: #999999;
             --border-color: #222222;
@@ -29,7 +29,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* Nawigacja w stylu ekskluzywnego studia */
+        /* Nawigacja */
         header {
             position: fixed;
             top: 0;
@@ -72,11 +72,11 @@
             transition: color 0.3s ease;
         }
 
-        nav a:hover {
+        nav a:hover, nav a.active {
             color: var(--accent-color);
         }
 
-        /* Sekcja Hero - monumentalna i oszczędna w formie */
+        /* Sekcja Hero */
         .hero {
             height: 100vh;
             display: flex;
@@ -84,18 +84,26 @@
             justify-content: center;
             align-items: flex-start;
             padding: 0 10%;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1612815154858-60aa4c59eae6?q=80&w=1920') center/cover;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('fanum.jpg') center/cover;
             position: relative;
         }
 
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 300;
+        .hero span.subtitle {
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 4px;
-            line-height: 1.1;
+            color: var(--accent-color);
             margin-bottom: 20px;
-            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            max-width: 950px;
         }
 
         .hero h1 span {
@@ -106,7 +114,7 @@
         .hero p {
             font-size: 1.1rem;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 650px;
             margin-bottom: 40px;
             line-height: 1.8;
         }
@@ -156,70 +164,22 @@
             letter-spacing: 2px;
         }
 
-        /* Portfolio / Realizacje – styl galerii topowych projektów tuningowych */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
-
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-            transition: transform 0.4s ease, border-color 0.4s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent-color);
-        }
-
-        .project-img-box {
-            height: 380px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .project-img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .project-card:hover .project-img-box img {
-            transform: scale(1.05);
-        }
-
-        .project-info {
-            padding: 40px;
-        }
-
-        .project-info h3 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-
-        .project-info p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* Usługi i Specyfikacja */
+        /* Siatka możliwości */
         .capabilities-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
         }
 
         .capability-box {
             background: var(--card-bg);
             padding: 50px 40px;
             border: 1px solid var(--border-color);
+            transition: border-color 0.3s ease;
+        }
+
+        .capability-box:hover {
+            border-color: var(--accent-color);
         }
 
         .capability-box h4 {
@@ -229,6 +189,13 @@
             letter-spacing: 2px;
             margin-bottom: 20px;
             color: var(--accent-color);
+        }
+
+        .capability-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
         }
 
         .capability-box ul {
@@ -250,7 +217,7 @@
             color: var(--accent-color);
         }
 
-        /* Sekcja techniczna (Park maszynowy i Inżynieria) */
+        /* Park Maszynowy / Tech Showase */
         .tech-showcase {
             display: flex;
             align-items: center;
@@ -326,129 +293,88 @@
 <body>
 
     <header>
-        <a href="#" class="logo">Studio <span>Kompozytów</span></a>
+        <a href="index.html" class="logo">LCP <span>Solutions</span></a>
         <nav>
-            <a href="#kompozyty">Kompozyty i Rzemiosło</a>
-            <a href="#inżynieria">Inżynieria 3D</a>
-            <a href="#realizacje">Realizacje & Figury</a>
-            <a href="#kontakt">Kontakt</a>
+            <a href="index.html" class="active">Strona Główna</a>
+            <a href="realizacje.html">Realizacje & Figury 3D</a>
+            <a href="#kompozyty">Kompozyty</a>
+            <a href="#inżynieria">Park Maszynowy</a>
         </nav>
     </header>
 
     <section class="hero">
-        <span class="section-subtitle">20 Lat Doskonałości Rzemiosła</span>
-        <h1>Sztuka Formowania <span>Materiałów i Włókna</span></h1>
-        <p>Tworzymy ekskluzywne komponenty z zaawansowanych kompozytów węglowych i szklanych oraz realizujemy monumentalne formy rzeźbiarskie z użyciem 5-osiowej technologii CNC.</p>
-        <a href="#realizacje" class="btn-luxury">Odkryj Realizacje</a>
+        <span class="subtitle">20 Lat Doskonałości Inżynieryjnej</span>
+        <h1>Zaawansowane Kompozyty i <span>Frezowanie CNC</span></h1>
+        <p>Od dwóch dekad projektujemy i wytwarzamy najwyższej klasy elementy z kompozytów szklanych i węglowych. Łączymy rzemiosło, infuzję próżniową, prepregi OOA oraz potężne zaplecze 5-osiowe.</p>
+        <a href="realizacje.html" class="btn-luxury">Zobacz Realizacje Figur</a>
     </section>
 
-    <section id="realizacje">
-        <div class="section-header">
-            <span class="section-subtitle">Portfolio Projektowe</span>
-            <h2 class="section-title">Wyróżniające Realizacje</h2>
-        </div>
-
-        <div class="projects-grid">
-            <!-- Kaktus -->
-            <div class="project-card">
-                <div class="project-img-box">
-                    <img src="kaktus.jpg" alt="Figura Kaktus">
-                </div>
-                <div class="project-info">
-                    <h3>Monumentalna Figura "Kaktus"</h3>
-                    <p>Zaawansowany projekt dla branży rozrywkowej. Precyzyjnie wyfrezowany z bloku XPS na maszynie 5-osiowej, zabezpieczony powłoką z polimocznika i wykończony we własnej lakierni.</p>
-                </div>
-            </div>
-
-            <!-- Don -->
-            <div class="project-card">
-                <div class="project-img-box">
-                    <img src="don.jpg" alt="Projekt Don">
-                </div>
-                <div class="project-info">
-                    <h3>Projekt Organiczny "Don"</h3>
-                    <p>Rzeźbiona postać zaprojektowana w środowisku Blender, przeniesiona do świata fizycznego z zachowaniem najdrobniejszych detali organicznych w piance poliuretanowej (PU).</p>
-                </div>
-            </div>
-
-            <!-- Bul -->
-            <div class="project-card">
-                <div class="project-img-box">
-                    <img src="bul.jpg" alt="Projekt Bul">
-                </div>
-                <div class="project-info">
-                    <h3>Kopyto Matrycowe "Bul"</h3>
-                    <p>Wielkogabarytowy model bazowy z MDF wykonany pod docelową formę kompozytową. Idealnie gładka powierzchnia przygotowana pod proces infuzji próżniowej.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="kompozyty" style="background: var(--card-bg);">
+    <section id="kompozyty">
         <div class="section-header">
             <span class="section-subtitle">Mistrzostwo Materiałowe</span>
-            <h2 class="section-title">Zaawansowane Kompozyty</h2>
+            <h2 class="section-title">Technologie Kompozytowe</h2>
         </div>
 
         <div class="capabilities-grid">
             <div class="capability-box">
-                <h4>Włókno Węglowe (Carbon)</h4>
+                <h4>Włókno Węglowe i Szklane</h4>
+                <p>Tworzymy wysoce wyspecjalizowane konstrukcje na bazie żywic epoksydowych i poliestrowych dla wymagających gałęzi przemysłu.</p>
                 <ul>
-                    <li>Struktury o najwyższym stosunku wytrzymałości do masy.</li>
-                    <li>Autorskie procesy utwardzania i autoklawowe / OOA.</li>
-                    <li>Bezkompromisowa estetyka wykończenia powierzchni.</li>
+                    <li>Struktury o optymalnym stosunku masy do wytrzymałości.</li>
+                    <li>Bezkompromisowa estetyka i struktura włókna.</li>
                 </ul>
             </div>
             <div class="capability-box">
-                <h4>Technologia Infuzji</h4>
+                <h4>Metody Wytwarzania</h4>
+                <p>Dopasowujemy technologię do specyfiki projektu, gwarantując najwyższe parametry mechaniczne.</p>
                 <ul>
-                    <li>Precyzyjne przesycanie zbrojenia w próżni.</li>
-                    <li>Najwyższa powtarzalność i brak pęcherzyków powietrza.</li>
-                    <li>Systemy żywic epoksydowych najwyższej klasy.</li>
+                    <li>Przetwórstwo prepregów OOA (Out of Autoclave).</li>
+                    <li>Infuzja próżniowa eliminująca pęcherzyki powietrza.</li>
+                    <li>Tradycyjne, precyzyjne laminowanie ręczne form.</li>
                 </ul>
             </div>
             <div class="capability-box">
-                <h4>Rzemiosło i Lakiernia</h4>
+                <h4>Wykończenie i Lakiernia</h4>
+                <p>Pełna niezależność produkcyjna pozwala nam dostarczyć gotowy wyrób bez podwykonawców.</p>
                 <ul>
-                    <li>Tradycyjne laminowanie ręczne form skomplikowanych.</li>
-                    <li>Własna, w pełni kontrolowana komora lakiernicza.</li>
-                    <li>Wykończenie lakiernicze klasy automotive.</li>
+                    <li>Własna, profesjonalna komora lakiernicza.</li>
+                    <li>Perfekcyjne przygotowanie i zabezpieczenie powierzchni.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section id="inżynieria">
+    <section id="inżynieria" style="background: var(--card-bg);">
         <div class="section-header">
-            <span class="section-subtitle">Park Technologiczny</span>
-            <h2 class="section-title">Inżynieria i Precyzja CNC</h2>
+            <span class="section-subtitle">Zaplecze Technologiczne</span>
+            <h2 class="section-title">Inżynieria i CNC</h2>
         </div>
 
         <div class="tech-showcase">
             <div class="tech-content">
-                <h3>Od Cyfrowego Modelu do Fizycznej Formy</h3>
-                <p>Nasz park maszynowy i zaplecze projektowe pozwalają na realizację najbardziej wymagających zadań dla przemysłu i parków rozrywki. Pracujemy w zaawansowanych środowiskach CAD oraz realizujemy inżynierię odwrotną za pomocą profesjonalnego skanera 3D.</p>
-                <p>Świadczymy kompleksowe usługi B2B w zakresie projektowania w Siemens NX i Blenderze, skanowania oraz usługowego frezowania.</p>
+                <h3>Precyzja 5 Osi i Skanowanie 3D</h3>
+                <p>Dysponujemy zaawansowanym parkiem maszynowym oraz profesjonalnym zapleczem projektowym. Nasi inżynierowie pracują w środowiskach <strong>Siemens NX</strong> (inżynieria twarda) oraz <strong>Blender</strong> (modelowanie organiczne). Posiadamy także profesjonalny skaner 3D do inżynierii odwrotnej.</p>
+                <p><strong>Świadczymy usługi B2B:</strong> oferujemy zewnętrznym firmom usługi skanowania, projektowania CAD oraz precyzyjnego frezowania usługowego.</p>
                 
                 <div class="tech-specs">
                     <div class="spec-item">
-                        <span>Pole Robocze CNC</span>
+                        <span>Pole Robocze Frezarki</span>
                         <strong>200 x 300 x 70 cm</strong>
                     </div>
                     <div class="spec-item">
-                        <span>Obrabiane Materiały</span>
+                        <span>Obsługiwane Materiały</span>
                         <strong>XPS, PU, MDF, Tworzywa</strong>
                     </div>
                 </div>
             </div>
-            <div style="flex: 1; height: 400px; border: 1px solid var(--border-color); overflow: hidden;">
+            <div style="flex: 1; height: 450px; border: 1px solid var(--border-color); overflow: hidden;">
                 <img src="fanum.jpg" alt="Frezarka 5-osiowa CNC" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
         </div>
     </section>
 
-    <footer id="kontakt">
-        <p>© 2026 Studio Kompozytów & Inżynierii CNC. Wszelkie prawa zastrzeżone.</p>
+    <footer>
+        <p>© 2026 LCP Solutions sp. z o.o. Wszelkie prawa zastrzeżone. Inżynieria Kompozytowa & CNC.</p>
     </footer>
 
 </body>
